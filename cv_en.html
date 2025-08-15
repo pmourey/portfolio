@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Philippe Mourey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.95em;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #4facfe;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile-text {
+            font-size: 1.1em;
+            color: #555;
+            text-align: justify;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #4facfe;
+        }
+
+        .skill-category h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .skill-category p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .experience-item {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4facfe;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .job-title {
+            color: #2c3e50;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .company {
+            color: #4facfe;
+            font-weight: 500;
+        }
+
+        .date {
+            background: #4facfe;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            white-space: nowrap;
+        }
+
+        .job-description {
+            color: #555;
+        }
+
+        .job-description ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .job-description li {
+            margin-bottom: 5px;
+        }
+
+        .sub-role {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+        }
+
+        .sub-role h4 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .education-section h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .education-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 3px solid #4facfe;
+        }
+
+        .education-item strong {
+            color: #2c3e50;
+        }
+
+        .misc-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .misc-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 3px solid #4facfe;
+        }
+
+        .misc-item strong {
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .cv-container {
+                margin: 10px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .job-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .skills-grid,
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <header class="header">
+            <h1>PHILIPPE MOUREY</h1>
+            <p class="subtitle">Software Development Consultant</p>
+            <div class="contact-info">
+                <span>📍 06700 Saint-Laurent-du-Var, France</span>
+                <span>📞 +33 6 89 15 08 56</span>
+                <a href="mailto:philippe@mourey.com">✉️ philippe@mourey.com</a>
+                <a href="https://linkedin.com/in/pmourey">🔗 LinkedIn</a>
+                <a href="https://github.com/pmourey">💻 GitHub</a>
+                <a href="https://pmourey.github.io/portfolio/">🌐 Portfolio</a>
+            </div>
+        </header>
+
+        <div class="content">
+            <section class="section">
+                <h2>🎯 PROFILE</h2>
+                <p class="profile-text">
+                    Software development consultant with expertise in programming, databases, and cybersecurity. 
+                    Passionate about designing high-performance and secure applications, I work on diverse projects 
+                    ranging from web development to backend development and system administration.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>🛠️ TECHNICAL SKILLS</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <p>Python, PHP, JavaScript, C/C++, Java, Bash, Perl, Delphi, PL/SQL</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frameworks & Tools</h3>
+                        <p>Flask, Django, Laravel, Node.js<br>SQL Alchemy (ORM), QT Designer</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <p>MySQL, PostgreSQL, Oracle, SQL Server</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Systems & Cloud</h3>
+                        <p>Linux (Debian, Ubuntu), Windows, MacOS<br>Git/Gitlab, Kubernetes</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cybersecurity</h3>
+                        <p>Ethical Hacking, security audits, ISO 27005 standards</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Project Management</h3>
+                        <p>Scrum, UML, Merise</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>💼 PROFESSIONAL EXPERIENCE</h2>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Delphi Developer</div>
+                            <div class="company">IDEA Informatique</div>
+                        </div>
+                        <div class="date">09/2023 – 11/2023</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Requirements analysis and technical specifications</li>
+                            <li>Delphi application development and testing</li>
+                            <li>Production deployment and technical documentation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Technical Integrator</div>
+                            <div class="company">Sopra Steria</div>
+                        </div>
+                        <div class="date">04/2022 – 10/2022</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Software deliverables integration and qualification</li>
+                            <li>Deployment automation (scripts and CI/CD)</li>
+                            <li>Documentation and bug fixes tracking</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Web Developer & Designer</div>
+                            <div class="company">Freelance</div>
+                        </div>
+                        <div class="date">10/2017 – 03/2019</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Custom web application design and development</li>
+                            <li>Backend programming (Python/Flask) and frontend (JavaScript)</li>
+                            <li>Database management (MySQL, PostgreSQL)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Analyst Programmer</div>
+                            <div class="company">ByMyCar</div>
+                        </div>
+                        <div class="date">07/2017 – 09/2017</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Office application development and deployment</li>
+                            <li>Database management and optimization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">IT Engineer</div>
+                            <div class="company">IBM France</div>
+                        </div>
+                        <div class="date">06/1998 – 03/2015</div>
+                    </div>
+                    <div class="job-description">
+                        <div class="sub-role">
+                            <h4>IT Development (2000-2002)</h4>
+                            <ul>
+                                <li>Websphere Commerce Suite application development</li>
+                            </ul>
+                        </div>
+                        <div class="sub-role">
+                            <h4>IT Security (2002-2014)</h4>
+                            <ul>
+                                <li>Ethical Hacking, security audits, ISO 27005</li>
+                            </ul>
+                        </div>
+                        <div class="sub-role">
+                            <h4>Infrastructure Management (1998-2000 & 2012-2015)</h4>
+                            <ul>
+                                <li>Monitoring, UNIX/Linux administration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🎓 EDUCATION & CERTIFICATIONS</h2>
+                <div class="education-grid">
+                    <div class="education-section">
+                        <h3>Certifications</h3>
+                        <div class="education-item">
+                            <strong>ISTQB® Certified Tester Foundation Level V4.0</strong><br>
+                            2024
+                        </div>
+                        <div class="education-item">
+                            <strong>GCIH – GIAC Certified Incident Handler</strong><br>
+                            SANS Institute, London – 2009
+                        </div>
+                        <div class="education-item">
+                            <strong>Risk Manager ISO/IEC 27005:2008</strong><br>
+                            HSC – 2011
+                        </div>
+                    </div>
+                    <div class="education-section">
+                        <h3>Education</h3>
+                        <div class="education-item">
+                            <strong>Computer Developer Designer</strong><br>
+                            AFPA, Nice – 2017
+                        </div>
+                        <div class="education-item">
+                            <strong>Systems & Networks Administration</strong><br>
+                            GRETA, Noisy-le-Grand – 1997
+                        </div>
+                        <div class="education-item">
+                            <strong>Master's Degree in Electronics</strong><br>
+                            University of Bordeaux – 1991-92
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🌟 ADDITIONAL INFORMATION</h2>
+                <div class="misc-items">
+                    <div class="misc-item">
+                        <strong>Sports</strong>
+                        Tennis (ranked 15/3 – former 1/6)
+                    </div>
+                    <div class="misc-item">
+                        <strong>Projects</strong>
+                        Hackathons & development competitions
+                    </div>
+                    <div class="misc-item">
+                        <strong>Technology Watch</strong>
+                        Cybersecurity, DevOps, AI
+                    </div>
+                    <div class="misc-item">
+                        <strong>RQTH</strong>
+                        Ergonomic accommodations available
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
