@@ -219,6 +219,227 @@
             margin-bottom: 5px;
         }
 
+.print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #4facfe;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .print-button:hover {
+            background: #00f2fe;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+        }
+
+        @media print {
+            @page {
+                margin: 0.5in;
+                size: A4;
+            }
+
+            body {
+                background: white !important;
+                padding: 0 !important;
+                font-size: 10px !important;
+                line-height: 1.2 !important;
+            }
+
+            .cv-container {
+                max-width: none !important;
+                margin: 0 !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+            }
+
+            .header {
+                background: #2c3e50 !important;
+                color: white !important;
+                padding: 8px !important;
+                page-break-after: avoid;
+                text-align: center !important;
+            }
+
+            .header h1 {
+                font-size: 1.1em !important;
+                text-shadow: none !important;
+                margin-bottom: 0 !important;
+                display: inline !important;
+            }
+
+            .header .subtitle {
+                font-size: 0.8em !important;
+                margin-bottom: 0 !important;
+                display: inline !important;
+                margin-left: 10px !important;
+            }
+
+            .contact-info {
+                font-size: 0.7em !important;
+                gap: 5px !important;
+                margin-top: 3px !important;
+                flex-wrap: nowrap !important;
+                justify-content: center !important;
+            }
+
+            .content {
+                padding: 10px !important;
+            }
+
+            .section {
+                margin-bottom: 15px !important;
+                break-inside: avoid;
+            }
+
+            .section h2 {
+                font-size: 1em !important;
+                border-bottom: 1px solid #2c3e50 !important;
+                color: #2c3e50 !important;
+                margin-bottom: 8px !important;
+                padding-bottom: 3px !important;
+            }
+
+            .profile-text {
+                font-size: 0.9em !important;
+                margin-bottom: 10px !important;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 8px !important;
+            }
+
+            .skill-category {
+                background: #f8f9fa !important;
+                border-left: 2px solid #2c3e50 !important;
+                padding: 6px !important;
+                margin-bottom: 5px !important;
+                break-inside: avoid;
+            }
+
+            .skill-category h3 {
+                font-size: 0.85em !important;
+                margin-bottom: 3px !important;
+            }
+
+            .skill-category p {
+                font-size: 0.75em !important;
+                line-height: 1.1 !important;
+            }
+
+            .experience-item {
+                background: #f8f9fa !important;
+                border-left: 2px solid #2c3e50 !important;
+                padding: 8px !important;
+                margin-bottom: 8px !important;
+                break-inside: avoid;
+            }
+
+            .job-header {
+                margin-bottom: 5px !important;
+            }
+
+            .job-title {
+                font-size: 0.9em !important;
+            }
+
+            .company {
+                font-size: 0.8em !important;
+            }
+
+            .date {
+                background: #2c3e50 !important;
+                color: white !important;
+                padding: 2px 6px !important;
+                font-size: 0.7em !important;
+            }
+
+            .job-description {
+                font-size: 0.8em !important;
+            }
+
+            .job-description ul {
+                margin-left: 12px !important;
+                margin-top: 3px !important;
+            }
+
+            .job-description li {
+                margin-bottom: 2px !important;
+            }
+
+            .sub-role {
+                margin-top: 8px !important;
+                padding-top: 5px !important;
+            }
+
+            .sub-role h4 {
+                font-size: 0.8em !important;
+                margin-bottom: 3px !important;
+            }
+
+            .education-grid {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 10px !important;
+            }
+
+            .education-section h3 {
+                font-size: 0.9em !important;
+                margin-bottom: 5px !important;
+            }
+
+            .education-item {
+                background: #f8f9fa !important;
+                border-left: 2px solid #2c3e50 !important;
+                padding: 6px !important;
+                margin-bottom: 5px !important;
+                font-size: 0.8em !important;
+                break-inside: avoid;
+            }
+
+            .misc-items {
+                grid-template-columns: repeat(4, 1fr) !important;
+                gap: 8px !important;
+            }
+
+            .misc-item {
+                background: #f8f9fa !important;
+                border-left: 2px solid #2c3e50 !important;
+                padding: 6px !important;
+                font-size: 0.7em !important;
+                break-inside: avoid;
+            }
+
+            .misc-item strong {
+                font-size: 0.8em !important;
+                margin-bottom: 2px !important;
+            }
+
+            .print-button,
+            .language-toggle,
+            .back-link {
+                display: none !important;
+            }
+
+            .contact-info a {
+                color: white !important;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+        }
+
         @media (max-width: 768px) {
             .cv-container {
                 margin: 10px;
@@ -264,12 +485,16 @@
                 <span>📍 06700 Saint-Laurent-du-Var</span>
                 <span>📞 06 89 15 08 56</span>
                 <a href="mailto:philippe@mourey.com">✉️ philippe@mourey.com</a>
+            </div>
+            <div class="contact-info">
                 <a href="https://linkedin.com/in/pmourey">🔗 LinkedIn</a>
                 <a href="https://github.com/pmourey">💻 GitHub</a>
                 <a href="https://pmourey.github.io/portfolio/">🌐 Portfolio</a>
             </div>
             <a href="cv_en.html" class="language-toggle">🇬🇧 English Version</a>
         </header>
+
+        <button class="print-button" onclick="window.print()">🖨️ Imprimer</button>
 
         <div class="content">
             <section class="section">
