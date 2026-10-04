@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Développeur Full-Stack</title>
+    <title>Philippe Mourey - Portfolio</title>
+    <meta name="description" content="Portfolio de Philippe Mourey — Développeur Full-Stack & Consultant Python, Flask, Django, React et architecture cloud.">
+    <meta property="og:title" content="Philippe Mourey - Portfolio">
+    <meta property="og:description" content="Portfolio de Philippe Mourey — Développeur Full-Stack & Consultant Python, Flask, Django, React et architecture cloud.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,15 +17,92 @@
             <nav class="header-actions">
                 <a href="cv.html" class="cta">📄 Voir mon CV</a>
                 <a href="certifications.html" class="cta-secondary">🏆 Certifications</a>
+                <a href="#contact" class="cta-secondary">📬 Contact</a>
                 <a href="index_en.html" class="language-toggle">🇬🇧 English</a>
             </nav>
         </header>
 
+        <div class="filter-container">
+            <div class="filter-header">
+                <div class="filter-title-wrapper">
+                    <span class="filter-icon">⚡</span>
+                    <span class="filter-title">Filtrer par technologie :</span>
+                </div>
+                <div class="filter-search-wrapper">
+                    <input type="text" id="projectSearchInput" class="filter-search-input" placeholder="Rechercher une technologie..." aria-label="Rechercher par technologie">
+                    <button id="clearSearchBtn" class="clear-search-btn" title="Effacer la recherche" aria-label="Effacer">✕</button>
+                </div>
+            </div>
+            <div class="filter-buttons" role="tablist" aria-label="Filtres technologiques">
+                <button class="filter-btn active" data-filter="all" type="button">
+                    Tous <span class="filter-count">20</span>
+                </button>
+                <button class="filter-btn" data-filter="python" type="button">
+                    🐍 Python <span class="filter-count">15</span>
+                </button>
+                <button class="filter-btn" data-filter="flask" type="button">
+                    🌶️ Flask <span class="filter-count">10</span>
+                </button>
+                <button class="filter-btn" data-filter="react" type="button">
+                    ⚛️ React <span class="filter-count">4</span>
+                </button>
+                <button class="filter-btn" data-filter="devops" type="button">
+                    ☁️ DevOps & Cloud <span class="filter-count">1</span>
+                </button>
+                <button class="filter-btn" data-filter="data" type="button">
+                    📊 Data & IA <span class="filter-count">3</span>
+                </button>
+                <button class="filter-btn" data-filter="django" type="button">
+                    🎸 Django <span class="filter-count">1</span>
+                </button>
+                <button class="filter-btn" data-filter="sqlite" type="button">
+                    🗄️ SQLite / SQL <span class="filter-count">6</span>
+                </button>
+                <button class="filter-btn" data-filter="gaming" type="button">
+                    🎮 Gaming & 3D <span class="filter-count">7</span>
+                </button>
+                <button class="filter-btn" data-filter="fullstack" type="button">
+                    🌐 Full-Stack <span class="filter-count">7</span>
+                </button>
+            </div>
+            <div class="filter-status" id="filterStatus" aria-live="polite">
+                Affichage de <strong>20</strong> projets
+            </div>
+        </div>
+
         <div class="projects-grid">
-            <div class="project-card">
+            <div class="project-card" data-tech="terraform kubernetes gcp docker gitlab-ci devops cloud">
+                <h3 class="project-title">Mini DevOps — GCP & Kubernetes (GKE)</h3>
+                <div class="project-meta">
+                    <span class="tech-tag">Terraform (IaC)</span>
+                    <span class="tech-tag">Kubernetes (GKE)</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">GitLab CI</span>
+                    <span class="cloud-tag">DevOps / Cloud</span>
+                </div>
+                <p class="project-description">Automatisation complète d'infrastructure et déploiement d'applications conteneurisées sur cluster Google Kubernetes Engine (GKE) : provisionnement de l'infrastructure as Code via Terraform, orchestration des pods/services Kubernetes et pipeline d'intégration/déploiement continu (CI/CD) sous GitLab.</p>
+                <div class="project-links">
+                    <a href="https://github.com/pmourey/mini-devops-gcp-k8s" class="github-link">📂 GitHub</a>
+                </div>
+            </div>
+            <div class="project-card" data-tech="python etl sqlite data-processing backend sql data">
+                <h3 class="project-title">Pipeline ETL & Ingestion de Données</h3>
+                <div class="project-meta">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">ETL</span>
+                    <span class="tech-tag">SQLite</span>
+                    <span class="data-tag">Data / Backend</span>
+                </div>
+                <p class="project-description">Pipeline ETL modulaire et robuste en Python : extraction et parsing de fichiers plats (CSV salariés), nettoyage et validation de schémas, enrichissement métier des données et chargement optimisé dans une base relationnelle SQLite.</p>
+                <div class="project-links">
+                    <a href="https://github.com/pmourey/mini-etl-python" class="github-link">📂 GitHub</a>
+                </div>
+            </div>
+            <div class="project-card" data-tech="python flask sqlalchemy sqlite web-app fullstack">
                 <h3 class="project-title">Gestion de taxis médicaux</h3>
                 <div class="project-meta">
                     <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Flask</span>
                     <span class="tech-tag">SQLAlchemy</span>
                     <span class="tech-tag">SQLite</span>
                     <span class="type-tag">Web App</span>
@@ -32,7 +112,7 @@
                     <a href="https://github.com/pmourey/GestionTaxis" class="github-link">📂 GitHub</a>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-tech="python pdfminer pdfplumber backend">
                 <h3 class="project-title">Modification de fichiers PDF</h3>
                 <div class="project-meta">
                     <span class="tech-tag">Python</span>
@@ -45,30 +125,32 @@
                     <span class="private-tag">🔒 Privé</span>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-tech="react frontend vite php ratchet websocket gaming">
                 <h3 class="project-title">Univers Ludique</h3>
                 <div class="project-meta">
-                    <span class="tech-tag">Frontend React (Vite)</span>
-                    <span class="tech-tag">Backend PHP (Ratchet WebSocket)</span>
+                    <span class="tech-tag">React (Vite)</span>
+                    <span class="tech-tag">PHP (WebSocket)</span>
+                    <span class="type-tag">Gaming</span>
                 </div>
                 <p class="project-description">Plateforme React + WebSocket pour jeux de société en ligne (Belote, Tarot, Poker). Architecture scalable, matchmaking en temps réel et UI responsive pour parties multijoueurs.</p>
                 <div class="project-links">
                     <a href="https://github.com/pmourey/UniversLudique" class="github-link">📂 GitHub</a>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-tech="flask react multiplayer gaming competitive">
                 <h3 class="project-title">GameArena</h3>
                 <div class="project-meta">
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">React</span>
                     <span class="tech-tag">Multi-joueur</span>
-                    <span class="tech-tag">Platforme Flask/React</span>
-                    <span class="type-tag">Programmation compétitive</span>
+                    <span class="type-tag">Gaming</span>
                 </div>
                 <p class="project-description">Plateforme d'arènes de jeux en ligne inspirée du projet CodinGame. Héberge et orchestre des défis de jeu multijoueur et des compétitions.</p>
                 <div class="project-links">
                     <a href="https://github.com/codingame-team/GameArena" class="github-link">📂 GitHub</a>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-tech="3d dungeon crawler gaming python">
                 <h3 class="project-title">Dungeon Explorer 3D</h3>
                 <div class="project-meta">
                     <span class="tech-tag">3D</span>
@@ -80,17 +162,19 @@
                     <a href="https://github.com/codingame-team/dungeon-explorer-3d" class="github-link">📂 GitHub</a>
                 </div>
             </div>
-            <div class="project-card">
-                <h3 class="project-title">Tests de Mathématiques</h3>
+            <div class="project-card" data-tech="flask python web-app education">
+                <h3 class="project-title">Plateforme Éducative Maths-Set-Co</h3>
                 <div class="project-meta">
                     <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="type-tag">Web App</span>
                 </div>
-                <p class="project-description">Tests de Mathématiques</p>
+                <p class="project-description">Site web interactif Flask pour la révision des mathématiques au collège (6e à 3e). Moteur de QCM aléatoires corrigés automatiquement, calcul des scores et progression personnalisée.</p>
                 <div class="project-links">
                     <a href="https://github.com/pmourey/Maths-Set-Co.git" class="github-link">📂 GitHub</a>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-tech="flask python sqlalchemy sqlite web-app fullstack">
                 <h3 class="project-title">Suivi de Candidatures</h3>
                 <div class="project-meta">
                     <span class="tech-tag">Flask</span>
@@ -103,20 +187,21 @@
                     <a href="https://github.com/pmourey/jobs" class="github-link">📂 GitHub</a>
                 </div>
             </div>
-            <div class="project-card">
-                <h3 class="project-title">Application de Cartographie</h3>
+            <div class="project-card" data-tech="flask python rest-api strava gpx fullstack data">
+                <h3 class="project-title">Analyseur GPX & Télémétrie Strava</h3>
                 <div class="project-meta">
                     <span class="tech-tag">Flask</span>
                     <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Strava / GPX</span>
                     <span class="tech-tag">REST API</span>
                     <span class="type-tag">Full-Stack</span>
                 </div>
-                <p class="project-description">Application web utilisant les API REST pour calculer des temps de trajet et distances parcourues avec visualisation cartographique interactive.</p>
+                <p class="project-description">Application web Flask et outillage CLI pour le traitement de fichiers GPX issus de Strava. Calcul d'itinéraires, analyse altimétrique et vitesse, et visualisation cartographique interactive des activités sportives.</p>
                 <div class="project-links">
                     <a href="https://github.com/codingame-team/Flask" class="github-link">📂 GitHub</a>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-tech="django python sqlite fullstack">
                 <h3 class="project-title">Système de Gestion de Cabinet Médical</h3>
                 <div class="project-meta">
                     <span class="tech-tag">Django</span>
@@ -129,7 +214,7 @@
                     <a href="https://github.com/pmourey/cabinet" class="github-link">📂 GitHub</a>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-tech="flask python sqlalchemy sqlite fullstack">
                 <h3 class="project-title">Gestion des Patients - Healthcare</h3>
                 <div class="project-meta">
                     <span class="tech-tag">Flask</span>
@@ -142,7 +227,7 @@
                     <a href="https://github.com/pmourey/healthcare" class="github-link">📂 GitHub</a>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-tech="flask python sqlalchemy blueprint fullstack">
                 <h3 class="project-title">Gestion Club de Tennis</h3>
                 <div class="project-meta">
                     <span class="tech-tag">Flask</span>
@@ -155,7 +240,7 @@
                     <a href="https://github.com/pmourey/tennis" class="github-link">📂 GitHub</a>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-tech="python tkinter pygame rest-api gaming">
                 <h3 class="project-title">Simulateur D&D 5th Edition</h3>
                 <div class="project-meta">
                     <span class="tech-tag">Python</span>
@@ -176,7 +261,7 @@
                     <a href="https://github.com/codingame-team/DnD-5th-Edition-API" class="github-link">📂 GitHub</a>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-tech="python flask pygame gaming">
                 <h3 class="project-title">Jeu d'Échecs</h3>
                 <div class="project-meta">
                     <span class="tech-tag">Python</span>
@@ -189,7 +274,7 @@
                     <a href="https://github.com/pmourey/chess-app" class="github-link">📂 GitHub</a>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-tech="react flask websocket fullstack gaming">
                 <h3 class="project-title">Jeux Multi-joueurs</h3>
                 <div class="project-meta">
                     <span class="tech-tag">React</span>
@@ -202,7 +287,7 @@
                     <a href="https://github.com/pmourey/board-games-frontend" class="github-link">📂 GitHub</a>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-tech="python algorithmes ia competitive codingame">
                 <h3 class="project-title">Programmation Compétitive - CodinGame</h3>
                 <div class="project-meta">
                     <span class="tech-tag">Python</span>
@@ -215,7 +300,7 @@
                     <a href="https://github.com/codingame-team?view_as=public" class="github-link">📂 GitHub</a>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-tech="python algorithmes optimisation competitive">
                 <h3 class="project-title">Concours Algorithmiques</h3>
                 <div class="project-meta">
                     <span class="tech-tag">Python</span>
@@ -228,12 +313,78 @@
                     <a href="https://github.com/orgs/algoContests/repositories" class="github-link">📂 GitHub</a>
                 </div>
             </div>
+            <div class="project-card" data-tech="python flask socketio websocket react pixijs docker fullstack gaming">
+                <h3 class="project-title">FunGame — Arène Temps Réel Socket.IO</h3>
+                <div class="project-meta">
+                    <span class="tech-tag">Python (Flask)</span>
+                    <span class="tech-tag">Socket.IO</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">PixiJS</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="type-tag">Full-Stack</span>
+                </div>
+                <p class="project-description">Jeu multijoueur tour par tour en temps réel : backend Python Flask avec communication bidirectionnelle WebSockets (Socket.IO) et frontend interactif React/PixiJS. Conteneurisation Docker Compose avec scripts de démarrage de production.</p>
+                <div class="project-links">
+                    <a href="https://github.com/pmourey/FunGame" class="github-link">📂 GitHub</a>
+                </div>
+            </div>
+            <div class="project-card" data-tech="python ollama llm ia ai machine-learning data">
+                <h3 class="project-title">Inférence & Expérimentation LLM Local (Ollama)</h3>
+                <div class="project-meta">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Ollama</span>
+                    <span class="tech-tag">LLM Open-Source</span>
+                    <span class="data-tag">IA / GenAI</span>
+                </div>
+                <p class="project-description">Environnement d'expérimentation et d'orchestration pour modèles de langage open-source exécutés en local via Ollama et scripts Python. Conception de prompts structurés, benchmarks de latence et intégration dans des flux applicatifs.</p>
+                <div class="project-links">
+                    <a href="https://github.com/pmourey/Ollama_training" class="github-link">📂 GitHub</a>
+                </div>
+            </div>
+            <div id="noProjectsMessage" class="no-projects-message" style="display: none;">
+                <div class="no-projects-icon">🔍</div>
+                <h3>Aucun projet trouvé</h3>
+                <p>Aucun projet ne correspond aux critères sélectionnés.</p>
+                <button class="reset-filter-btn" id="resetFilterBtn" type="button">Réinitialiser les filtres</button>
+            </div>
         </div>
         
         <div class="certifications-link">
             <a href="certifications.html">🏆 Voir mes Certifications</a>
             <a href="cv.html">📄 Mon CV</a>
         </div>
+
+        <section class="contact-section" id="contact">
+            <h2 class="contact-title">📬 Contact & Réseaux Professionnels</h2>
+            <p class="contact-subtitle">N'hésitez pas à me contacter pour discuter d'opportunités professionnelles, de missions de développement ou d'échanges techniques.</p>
+            <div class="contact-grid">
+                <a href="mailto:philippe.mourey@example.com" class="contact-card email-card">
+                    <div class="contact-card-icon">✉️</div>
+                    <div class="contact-card-content">
+                        <span class="contact-card-platform">Email</span>
+                        <span class="contact-card-value">philippe.mourey@example.com</span>
+                        <span class="contact-card-action">Envoyer un message →</span>
+                    </div>
+                </a>
+                <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" class="contact-card linkedin-card">
+                    <div class="contact-card-icon">💼</div>
+                    <div class="contact-card-content">
+                        <span class="contact-card-platform">LinkedIn</span>
+                        <span class="contact-card-value">linkedin.com/in/your-profile</span>
+                        <span class="contact-card-action">Se connecter sur LinkedIn →</span>
+                    </div>
+                </a>
+                <a href="https://twitter.com/your_handle" target="_blank" rel="noopener noreferrer" class="contact-card twitter-card">
+                    <div class="contact-card-icon">🐦</div>
+                    <div class="contact-card-content">
+                        <span class="contact-card-platform">Twitter / X</span>
+                        <span class="contact-card-value">@your_handle</span>
+                        <span class="contact-card-action">Suivre sur Twitter / X →</span>
+                    </div>
+                </a>
+            </div>
+        </section>
     </div>
+    <script src="filter.js"></script>
 </body>
 </html>
