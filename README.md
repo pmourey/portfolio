@@ -2,7 +2,7 @@
 **Consultant en développement logiciel**
 
 📍 06700 Saint-Laurent-du-Var • 📞 06 89 15 08 56  
-✉️ philippe@mourey.com • 🔗 [LinkedIn](https://linkedin.com/in/pmourey) • 💻 [GitHub](https://github.com/pmourey) • 🌐 [Portfolio](https://pmourey.github.io/portfolio/)
+✉️ [philippe.mourey@gmail.com](mailto:philippe.mourey@gmail.com) • 🔗 [LinkedIn](https://www.linkedin.com/in/pmourey/) • 🐦 [Twitter / X](https://x.com/philmourey) • 💻 [GitHub](https://github.com/pmourey) • 🌐 [Portfolio](https://pmourey.github.io/portfolio/)
 
 ---
 

@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 // Fallback route for unmatched requests
 app.use((req, res) => {
-  res.status(404).sendFile(path.join(__dirname, 'index.html'));
+  res.status(404).sendFile(path.join(__dirname, '404.html'));
 });
 
 app.listen(PORT, HOST, () => {
