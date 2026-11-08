@@ -1,51 +1,145 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page non trouvée | Philippe Mourey</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .notfound-container {
-            text-align: center;
-            padding: 60px 20px;
-        }
-        .notfound-code {
-            font-size: 5em;
-            font-weight: 800;
-            color: #4facfe;
-            margin-bottom: 10px;
-            line-height: 1;
-        }
-        .notfound-title {
-            font-size: 1.8em;
-            color: #2c3e50;
-            margin-bottom: 15px;
-        }
-        .notfound-text {
-            color: #64748b;
-            font-size: 1.1em;
-            max-width: 500px;
-            margin: 0 auto 30px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header class="header">
-            <h1>Philippe Mourey</h1>
-            <p class="subtitle">Consultant en développement logiciel</p>
-        </header>
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Philippe Mourey – Développeur Full-Stack & Consultant Freelance</title>
+    <meta
+      name="description"
+      content="Développeur Full-Stack & Consultant avec plus de 20 ans d'expérience (ex-IBM). Applications web Python/Flask/Django, frontend React, architecture cloud et sécurité."
+    />
+    <meta name="author" content="Philippe Mourey" />
+    <meta name="keywords" content="Philippe Mourey, Développeur Full-Stack, Freelance, Python, Flask, Django, React, TypeScript, Sécurité informatique, ISO 27005, ISTQB, Nice, Saint-Laurent-du-Var, Consultant IT" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://pmourey.github.io/portfolio/" />
 
-        <div class="notfound-container">
-            <div class="notfound-code">404</div>
-            <h2 class="notfound-title">Page introuvable</h2>
-            <p class="notfound-text">La page que vous recherchez n'existe pas ou a été déplacée.</p>
-            <div class="certifications-link">
-                <a href="index.html">🏠 Retour au Portfolio</a>
-                <a href="cv.html">📄 Voir mon CV</a>
-            </div>
-        </div>
-    </div>
-</body>
+    <!-- OpenGraph Social Cards -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Philippe Mourey – Développeur Full-Stack & Consultant Freelance" />
+    <meta
+      property="og:description"
+      content="Développeur Full-Stack & Consultant (ex-IBM). Création d'applications web robustes Python & React, audits de sécurité logicielle et services freelance."
+    />
+    <meta property="og:site_name" content="Philippe Mourey Portfolio" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="profile:first_name" content="Philippe" />
+    <meta property="profile:last_name" content="Mourey" />
+    <meta property="profile:username" content="pmourey" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Philippe Mourey – Développeur Full-Stack & Consultant Freelance" />
+    <meta
+      name="twitter:description"
+      content="Développeur Full-Stack & Consultant avec plus de 20 ans d'expertise. Python, React, Cloud & Sécurité logicielle."
+    />
+
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://pmourey.github.io/portfolio/#person",
+          "name": "Philippe Mourey",
+          "jobTitle": "Développeur Full-Stack & Consultant Logiciel",
+          "description": "Consultant en développement logiciel avec plus de 20 ans d'expérience (17 ans chez IBM France), spécialisé en Python (Flask, Django), React, architecture système et cybersécurité.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Saint-Laurent-du-Var",
+            "postalCode": "06700",
+            "addressCountry": "FR"
+          },
+          "email": "philippe.mourey@gmail.com",
+          "telephone": "+33689150856",
+          "sameAs": [
+            "https://github.com/pmourey",
+            "https://pmourey.github.io/portfolio/",
+            "https://www.doyoubuzz.com/mourey-philippe"
+          ],
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "ISTQB Certified Tester Foundation Level V4.0",
+              "dateCreated": "2024"
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "GCIH – GIAC Certified Incident Handler",
+              "recognizedBy": {
+                "@type": "Organization",
+                "name": "SANS Institute"
+              }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Risk Manager ISO/IEC 27005:2008"
+            }
+          ]
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://pmourey.github.io/portfolio/#service",
+          "name": "Philippe Mourey – Prestations Freelance & Conseil IT",
+          "provider": {
+            "@id": "https://pmourey.github.io/portfolio/#person"
+          },
+          "areaServed": "France",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Prestations de Développement & Conseil",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Développement d'applications Web sur mesure (Python & React)"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Audit de code, tests automatisés & sécurité logicielle"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Modernisation d'outils métier & automatisation de flux"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pmourey.github.io/portfolio/#website",
+          "url": "https://pmourey.github.io/portfolio/",
+          "name": "Philippe Mourey Portfolio",
+          "inLanguage": "fr-FR"
+        }
+      ]
+    }
+    </script>
+    <script type="module" crossorigin src="./assets/index-B56nRXEF.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-la_ZsWYt.js">
+    <link rel="modulepreload" crossorigin href="./assets/vendor-icons-BtrAo8i3.js">
+    <link rel="modulepreload" crossorigin href="./assets/vendor-react-D6BrX7QU.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-Ds4upBhA.css">
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-indigo-500 selection:text-white dark:bg-slate-950 dark:text-slate-100">
+    <div id="root"></div>
+  </body>
 </html>
+
