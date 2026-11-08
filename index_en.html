@@ -32,16 +32,22 @@
             </div>
             <div class="filter-buttons" role="tablist" aria-label="Technology filters">
                 <button class="filter-btn active" data-filter="all" type="button">
-                    All <span class="filter-count">20</span>
+                    All <span class="filter-count">21</span>
+                </button>
+                <button class="filter-btn" data-filter="react" type="button">
+                    ⚛️ React & 3D <span class="filter-count">5</span>
+                </button>
+                <button class="filter-btn" data-filter="gaming" type="button">
+                    🎮 Gaming & WebGL <span class="filter-count">8</span>
                 </button>
                 <button class="filter-btn" data-filter="python" type="button">
-                    🐍 Python <span class="filter-count">15</span>
+                    🐍 Python <span class="filter-count">16</span>
                 </button>
                 <button class="filter-btn" data-filter="flask" type="button">
                     🌶️ Flask <span class="filter-count">10</span>
                 </button>
-                <button class="filter-btn" data-filter="react" type="button">
-                    ⚛️ React <span class="filter-count">4</span>
+                <button class="filter-btn" data-filter="django" type="button">
+                    🎸 Django <span class="filter-count">1</span>
                 </button>
                 <button class="filter-btn" data-filter="devops" type="button">
                     ☁️ DevOps & Cloud <span class="filter-count">1</span>
@@ -49,17 +55,11 @@
                 <button class="filter-btn" data-filter="data" type="button">
                     📊 Data & AI <span class="filter-count">3</span>
                 </button>
-                <button class="filter-btn" data-filter="django" type="button">
-                    🎸 Django <span class="filter-count">1</span>
-                </button>
                 <button class="filter-btn" data-filter="sqlite" type="button">
                     🗄️ SQLite / SQL <span class="filter-count">6</span>
                 </button>
-                <button class="filter-btn" data-filter="gaming" type="button">
-                    🎮 Gaming & 3D <span class="filter-count">7</span>
-                </button>
                 <button class="filter-btn" data-filter="fullstack" type="button">
-                    🌐 Full-Stack <span class="filter-count">7</span>
+                    🌐 Full-Stack <span class="filter-count">8</span>
                 </button>
             </div>
             <div class="filter-status" id="filterStatus" aria-live="polite">
@@ -67,7 +67,33 @@
             </div>
         </div>
 
-        <div class="projects-grid">
+                <div class="projects-grid">
+            <div class="project-card featured-project" data-tech="react typescript threejs webgl gaming 3d python retro-engineering fullstack">
+                <div class="featured-badge">⭐ Featured Project • R&D & WebGL Gaming</div>
+                <h3 class="project-title">⚔️ Wizardry: Classic Quadrilogy (I to IV) & 13 Apple II Scenarios</h3>
+                <div class="project-meta">
+                    <span class="tech-tag">React 18 / TypeScript</span>
+                    <span class="tech-tag">Three.js / WebGL</span>
+                    <span class="tech-tag">Python (UCSD Extractor)</span>
+                    <span class="tech-tag">Reverse Engineering (Pascal / 6502 ASM)</span>
+                    <span class="type-tag">3D WebGL Gaming</span>
+                </div>
+                <p class="project-description">
+                    Faithful, modernized recreation of the seminal Sir-Tech RPG saga (full Quadrilogy I–IV + 9 Apple II community campaigns). 
+                    Complete reverse engineering from vintage Apple II floppy disk images and original UCSD Pascal / 6502 assembly source:
+                </p>
+                <ul class="project-description">
+                    <li><strong>Real-time Three.js 3D engine:</strong> 1st person dungeon view, dynamic torch lighting, distance fog, retro wireframe mode (1981 Apple II).</li>
+                    <li><strong>Interactive tactical minimap (Key M):</strong> live floor exploration on vector SVG with tactile D-Pad and touch gestures.</li>
+                    <li><strong>Authentic game rules simulation:</strong> attributes, spell tables, party management, per-coordinate body recovery expeditions.</li>
+                    <li><strong>NTSC color decoding:</strong> original Apple II monster portraits and ambient soundtrack (Kentaro Haneda).</li>
+                    <li><strong>Python automated disk parser:</strong> parses .dsk images and multi-platform packaging (Web / Android Capacitor).</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://pmourey.github.io/Wizardry/" target="_blank" rel="noopener noreferrer" class="demo-link">🎮 Live Web Demo (Playable)</a>
+                    <a href="https://github.com/pmourey/Wizardry" target="_blank" rel="noopener noreferrer" class="github-link">📂 GitHub</a>
+                </div>
+            </div>
             <div class="project-card" data-tech="terraform kubernetes gcp docker gitlab-ci devops cloud">
                 <h3 class="project-title">Mini DevOps — GCP & Kubernetes (GKE)</h3>
                 <div class="project-meta">
