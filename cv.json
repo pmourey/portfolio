@@ -39,16 +39,17 @@
     },
     "work": [
         {
-            "name": "Projets Logiciels R&D / Open-Source",
-            "position": "Concepteur Développeur WebGL / 3D & Applications IA",
-            "url": "https://pmourey.github.io/Wizardry/",
+            "name": "Projets Open-Source & Écosystème GitHub (github.com/pmourey)",
+            "position": "Développeur Full-Stack, WebGL & Solutions IA",
+            "url": "https://github.com/pmourey",
             "startDate": "2024-01-01",
             "endDate": "2026-11-01",
-            "summary": "Rétro-ingénierie et modernisation complète de la saga Wizardry (I à IV + 13 scénarios Apple II) en WebGL/Three.js et React/TypeScript. Développement de systèmes de jeux et d'outils interactifs intégrant des agents d'IA (LLMs).",
+            "summary": "Développement d'applications web full-stack, moteurs 3D WebGL et solutions basées sur des agents d'intelligence artificielle. Rétro-ingénierie et modernisation complète de la saga Wizardry (Three.js/React).",
             "highlights": [
                 "Three.js, WebGL, React, TypeScript, Python (extraction UCSD Pascal et ASM 6502), Capacitor (Android)",
-                "Intégration d'agents d'IA, simulation procédurale et arènes de jeu",
-                "Déploiement GitHub Pages et architecture web moderne"
+                "Applications web métier & E-commerce (Flask/Django, React, Stripe, PostgreSQL/SQLite)",
+                "Intégration d'agents d'IA, pipelines LLM locaux (Ollama) et mécaniques de jeu tour-par-tour",
+                "Déploiement GitHub Pages, itch.io et architecture logicielle moderne"
             ]
         },
         {
