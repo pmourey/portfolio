@@ -89,5 +89,63 @@
             <a href="index.html">← Back to Portfolio</a>
         </div>
     </div>
+
+    <!-- Lightbox Modal: Opens in same tab, closes on click -->
+    <div id="imageLightbox" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Aperçu du certificat">
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="Certificat en taille réelle">
+            <span class="lightbox-hint">✕ Cliquer n'importe où pour fermer (ou touche Échap)</span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImg = document.getElementById('lightboxImage');
+            const links = document.querySelectorAll('.cert-image a');
+
+            function openLightbox(src, alt) {
+                lightboxImg.src = src;
+                lightboxImg.alt = alt || 'Certificat';
+                lightbox.style.display = 'flex';
+                // Trigger transition
+                requestAnimationFrame(() => {
+                    lightbox.classList.add('active');
+                });
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                setTimeout(() => {
+                    if (!lightbox.classList.contains('active')) {
+                        lightbox.style.display = 'none';
+                        lightboxImg.src = '';
+                    }
+                }, 250);
+                document.body.style.overflow = '';
+            }
+
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const img = link.querySelector('img');
+                    openLightbox(link.getAttribute('href'), img ? img.getAttribute('alt') : '');
+                });
+            });
+
+            // Close automatically when clicking anywhere on the overlay or on the image itself
+            lightbox.addEventListener('click', () => {
+                closeLightbox();
+            });
+
+            // Close on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                    closeLightbox();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
