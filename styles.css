@@ -420,6 +420,24 @@ body {
     box-shadow: 0 4px 12px rgba(26, 183, 234, 0.4);
 }
 
+.itch-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #fa5c5c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.itch-link:hover {
+    background: #e03838;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(250, 92, 92, 0.4);
+}
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
