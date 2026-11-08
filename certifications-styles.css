@@ -66,11 +66,23 @@ body {
     flex-shrink: 0;
 }
 
+.cert-image a {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
 .cert-image img {
     width: 150px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.cert-image a:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
 }
 
 .cert-info {
